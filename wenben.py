@@ -10,8 +10,6 @@ from keras.layers.core import Dense, Dropout, Activation
 from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import LSTM, GRU
 
-from __future__ import absolute_import #导入3.x的特征函数
-from __future__ import print_function
 
 neg=pd.read_excel('neg.xls',header=None,index=None)
 pos=pd.read_excel('pos.xls',header=None,index=None) #读取训练语料完毕
