@@ -58,7 +58,7 @@ model.add(Embedding(len(dict)+1, 256))
 model.add(LSTM(256)) # try using a GRU instead, for fun
 model.add(Dense(128))
 model.add(Dropout(0.5))
-model.add(Dense(1, activation('sigmoid')))
+model.add(Dense(1, Activation('sigmoid')))
 # model.add(Activation('sigmoid'))
 
 model.compile(loss='binary_crossentropy', optimizer='adam', class_mode="binary")
