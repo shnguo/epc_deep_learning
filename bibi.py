@@ -138,10 +138,10 @@ if __name__=='__main__':
     classes = model.predict_classes(t_x)
     # print(score)
     # print(classes)
-    model.save('mymodel.h5')
     da = DataFrame(idlist)
     da[1] = classes
     da.to_csv('result.csv',sep=',', encoding='utf-8',index=False,header=False)
+    model.save('mymodel.h5')
     
     
     
