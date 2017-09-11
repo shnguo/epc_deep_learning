@@ -109,8 +109,8 @@ if __name__=='__main__':
     t_textlist,idlist = get_test_data(testfilename)
     pprint(t_textlist[:2])
     pprint(idlist[:2])
-    textlist = textlist[:20]
-    labellist = labellist[:20]
+    # textlist = textlist[:20]
+    # labellist = labellist[:20]
     text_array = get_text_array(textlist)
     t_text_array = get_text_array(t_textlist)
     full_text_array = []
@@ -132,7 +132,7 @@ if __name__=='__main__':
     y2 = train_y[1::2]
     llen = len(text_num_map)+1
     model = get_lstm_model(llen)
-    model.fit(train_x, train_y, batch_size=16, epochs=1)
+    model.fit(train_x, train_y, batch_size=16, epochs=20)
     # model = get_hd5_model()
     # score = model.evaluate(x2, y2, batch_size=16)
     classes = model.predict_classes(t_x)
