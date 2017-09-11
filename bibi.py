@@ -136,8 +136,8 @@ if __name__=='__main__':
     # model = get_hd5_model()
     # score = model.evaluate(x2, y2, batch_size=16)
     classes = model.predict_classes(t_x)
-    print(score)
-    print(classes)
+    # print(score)
+    # print(classes)
     model.save('mymodel.h5')
     da = DataFrame(idlist)
     da[1] = classes
