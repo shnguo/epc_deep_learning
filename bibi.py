@@ -132,10 +132,10 @@ if __name__=='__main__':
     y2 = train_y[1::2]
     llen = len(text_num_map)+1
     model = get_lstm_model(llen)
-    train_x = train_x[:10]
-    train_y = train_y[:10]
+    # train_x = train_x[:10]
+    # train_y = train_y[:10]
     # t_x = t_x[:10]
-    model.fit(train_x, train_y, batch_size=16, epochs=2)
+    model.fit(train_x, train_y, batch_size=16, epochs=5)
     # model = get_hd5_model()
     # score = model.evaluate(x2, y2, batch_size=16)
     classes = model.predict_classes(t_x)
