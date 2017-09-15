@@ -61,12 +61,12 @@ def get_test_data(filename):
 
 def af_textlist(textlist):
     frequency = defaultdict(int)
-    for text in texts:
+    for text in textlist:
         for token in text:
             frequency[token] += 1
     
     texts = [[token for token in text if frequency[token] > 1]
-              for text in texts]
+              for text in textlist]
     return texts
 
 
