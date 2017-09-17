@@ -30,11 +30,12 @@ def get_data(filename):
         if isinstance(row[4], str):
             istr += row[4]
             istr += ' '
+        if isinstance(row[7], str):
             istr += row[7]
         if not istr:
             print('error')
             print(row[0])
-            exit()
+            continue
         # istr = row[7]
         textlist.append(istr)       
         labellist.append(int(row[2]))
