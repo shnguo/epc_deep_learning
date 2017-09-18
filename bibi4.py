@@ -153,7 +153,7 @@ if __name__=='__main__':
     # train_x = train_x[:10]
     # train_y = train_y[:10]
     # t_x = t_x[:10]
-    model.fit(train_x, train_y, batch_size=16, epochs=4)
+    model.fit(train_x, train_y, batch_size=16, epochs=3)
     # model = get_hd5_model()
     # score = model.evaluate(x2, y2, batch_size=16)
     classes = model.predict_classes(t_x)
@@ -161,8 +161,8 @@ if __name__=='__main__':
     # print(classes)
     da = DataFrame(idlist)
     da[1] = classes
-    da.to_csv('result6.csv',sep=',', encoding='utf-8',index=False,header=False)
-    model.save('mymodel6.h5')
+    da.to_csv('result3.csv',sep=',', encoding='utf-8',index=False,header=False)
+    model.save('mymodel3.h5')
     
     
     
